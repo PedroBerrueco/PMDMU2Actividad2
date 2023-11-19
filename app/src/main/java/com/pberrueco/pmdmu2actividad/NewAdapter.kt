@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 
 class NewAdapter(private val newsList: List<New>) : RecyclerView.Adapter<NewAdapter.NewViewHolder>() {
 
+    private var onItemClickListener: ((New) -> Unit)? = null
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleTextView: TextView = itemView.findViewById(R.id.tv_title)
         val imageView: ImageView = itemView.findViewById(R.id.iv_noticias)
@@ -35,7 +36,11 @@ class NewAdapter(private val newsList: List<New>) : RecyclerView.Adapter<NewAdap
 
     }
 
-    class NewViewHolder(private val binding: ItemNewsBinding) : RecyclerView.ViewHolder(binding.root) {
+    fun setOnItemClickListener(listener: (New) -> Unit) {
+        this.onItemClickListener = listener
+    }
+
+    inner class NewViewHolder(private val binding: ItemNewsBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(news: New) {
             // Configura los datos del ViewHolder usando View Binding
             binding.tvTitle.text = news.title
@@ -45,6 +50,11 @@ class NewAdapter(private val newsList: List<New>) : RecyclerView.Adapter<NewAdap
                 .into(binding.ivNoticias)
             binding.tvDescripcion.text = news.description
             binding.tvAuthor.text = news.author
+
+            // Configurar el clic en el ViewHolder
+            binding.root.setOnClickListener {
+                onItemClickListener?.invoke(news)
+            }
         }
     }
 }

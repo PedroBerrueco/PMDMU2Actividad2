@@ -34,5 +34,18 @@
         <argument
             android:name="nameRadio"
             app:argType="string" />
+        <action
+            android:id="@+id/action_fragNews_to_fragDetalleNoticia"
+            app:destination="@id/fragDetalleNoticia" />
     </fragment>
+    <fragment
+        android:id="@+id/fragDetalleNoticia"
+        android:name="com.pberrueco.pmdmu2actividad.FragDetalleNoticia"
+        android:label="fragment_frag_detalle_noticia"
+        tools:layout="@layout/fragment_frag_detalle_noticia" >
+        <argument
+            android:name="selectedNew"
+            app:argType="com.pberrueco.pmdmu2actividad.New" />
+    </fragment>
+
 </navigation>

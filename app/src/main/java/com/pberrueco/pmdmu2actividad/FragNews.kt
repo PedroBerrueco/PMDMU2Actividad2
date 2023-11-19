@@ -1,10 +1,13 @@
 package com.pberrueco.pmdmu2actividad
 
+import SimpleNewsAdapter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavDirections
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pberrueco.pmdmu2actividad.databinding.FragmentFragNewsBinding
@@ -75,7 +78,18 @@ class FragNews : Fragment() {
         // Configurar el RecyclerView
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = adapter
+
+        // Agregar el click listener al adapter
+        adapter.setOnItemClickListener { selectedNew ->
+            // Aquí se llama cuando el usuario hace clic en una noticia
+            //val action = FragNewsDirections.actionFragNewsToFragDetalleNoticia(selectedNew.title ?: "")
+            //findNavController().navigate(action)
+            val action = FragNewsDirections.actionFragNewsToFragDetalleNoticia(selectedNew)
+            findNavController().navigate(action)
+
+        }
     }
+
 
 
     private fun getNewsList(name: String): List<New> {
@@ -109,3 +123,4 @@ class FragNews : Fragment() {
         return allNewsList
     }
 }
+
