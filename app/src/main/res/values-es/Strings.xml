@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Bienvenido">¡¡¡Bienvenido!!!</string>
+    <string name="ed_name">Nombre</string>
+    <string name="continuar">Continuar</string>
+    <string name="adult">¿Eres mayor de Edad?</string>
+    <string name="tv_edad_hola">Hola $name</string>
+    <string name="deportes">Deportes</string>
+    <string name="noticias">Noticias</string>
+</resources>

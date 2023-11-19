@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/grafo"
+    app:startDestination="@id/fragWelcome">
+
+    <fragment
+        android:id="@+id/fragWelcome"
+        android:name="com.pberrueco.pmdmu2actividad.FragWelcome"
+        android:label="fragment_frag_welcome"
+        tools:layout="@layout/fragment_frag_welcome" >
+        <action
+            android:id="@+id/action_fragWelcome_to_fragEdad"
+            app:destination="@id/fragEdad" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragEdad"
+        android:name="com.pberrueco.pmdmu2actividad.FragEdad"
+        android:label="fragment_frag_edad"
+        tools:layout="@layout/fragment_frag_edad" >
+        <argument
+            android:name="nameValue"
+            app:argType="string[]" />
+        <action
+            android:id="@+id/action_fragEdad_to_fragNews"
+            app:destination="@id/fragNews" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragNews"
+        android:name="com.pberrueco.pmdmu2actividad.FragNews"
+        android:label="fragment_frag_news"
+        tools:layout="@layout/fragment_frag_news" >
+        <argument
+            android:name="nameRadio"
+            app:argType="string" />
+    </fragment>
+</navigation>
