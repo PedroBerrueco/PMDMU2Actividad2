@@ -21,10 +21,9 @@
                 android:id="@+id/tvTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:layout_marginBottom="8dp"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp"/>
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/ivNoticias"
@@ -38,15 +37,13 @@
                 android:id="@+id/tvDescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:text="Aquí va tu texto de descripción" />
+                android:ellipsize="end" />
 
             <TextView
                 android:id="@+id/tvAuthor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:layout_marginBottom="4dp"/>
+                android:layout_marginBottom="4dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

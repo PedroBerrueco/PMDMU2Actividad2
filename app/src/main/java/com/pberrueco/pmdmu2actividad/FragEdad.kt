@@ -56,7 +56,7 @@ class FragEdad : Fragment() {
         // Guarda el dato que recibes del primer fragmento
         val name: String = args.nameValue[0]
         // Mete el nombre en el TextView
-        binding.tvHola.text = "Hola $name"
+        binding.tvHola.text = "$name"
     }
 
     private fun configureButtonAndNavigation() {

@@ -1,5 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/Sport" android:icon="@drawable/baseline_sports_basketball_24" android:title="Sport"/>
-    <item android:id="@+id/Tech" android:icon="@drawable/baseline_phone_android_24" android:title="tech"/>
-    <item android:id="@+id/News" android:icon="@drawable/baseline_phone_android_24" android:title="News"/>
+    <item
+        android:id="@+id/Sport"
+        android:icon="@drawable/baseline_sports_basketball_24"
+        android:title="@string/deportes" />
+    <item
+        android:id="@+id/Tech"
+        android:icon="@drawable/baseline_phone_android_24"
+        android:title="@string/tecnologia" />
+    <item
+        android:id="@+id/News"
+        android:icon="@drawable/baseline_phone_android_24"
+        android:title="@string/noticias" />
 </menu>

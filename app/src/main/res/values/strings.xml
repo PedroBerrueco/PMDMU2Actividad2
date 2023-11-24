@@ -7,7 +7,7 @@
     <string name="Bienvenido">Welcome!!!</string>
     <string name="continuar">Continue</string>
     <string name="adult">Are you an adult?</string>
-    <string name="tv_edad_hola">Hello $name</string>
+    <string name="tv_edad_hola">Hello</string>
     <string name="deportes">Sports</string>
     <string name="noticias">News</string>
     <string name="tecnologia">Technology</string>
